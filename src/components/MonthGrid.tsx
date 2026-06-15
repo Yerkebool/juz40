@@ -105,6 +105,16 @@ export function MonthGrid({
           );
         })}
       </div>
+
+      {/* Legend */}
+      <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 mt-3 px-2">
+        {courses.map((course) => (
+          <div key={course.id} className="flex items-center gap-1.5">
+            <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: course.color }} />
+            <span className="text-[10px] text-white/50">{course.name}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
